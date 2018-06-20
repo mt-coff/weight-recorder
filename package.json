@@ -1,5 +1,5 @@
 {
-  "name": "weightRecorder",
+  "name": "weight-recorder",
   "version": "0.0.0",
   "description": "Weight manage application",
   "scripts": {
