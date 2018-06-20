@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "sourceMap": true,
+    "module": "esnext",
+    "target": "es5",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "lib": ["es6", "dom"],
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true
+  },
+  "include": ["src/**/*", "tests/**/*.ts"],
+  "exclude": ["node_modules"]
+}
