@@ -17,6 +17,6 @@
     "noUnusedLocals": true,
     "strictNullChecks": true
   },
-  "include": ["src/**/*", "tests/**/*.ts"],
+  "include": ["src/**/*", "tests/**/*.ts", "tests/**/*.tsx"],
   "exclude": ["node_modules"]
 }
