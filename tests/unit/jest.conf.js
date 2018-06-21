@@ -9,6 +9,7 @@ module.exports = {
   transform: {
     "^.+\\.tsx?$": "ts-jest"
   },
+  setupFiles: ["<rootDir>/tests/unit/setup"],
   mapCoverage: true,
   coverageDirectory: "<rootDir>/tests/unit/coverage",
   collectCoverageFrom: [
