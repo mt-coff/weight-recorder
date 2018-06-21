@@ -4,7 +4,8 @@ module.exports = {
   rootDir: path.resolve(__dirname, "../../"),
   moduleFileExtensions: ["js", "json", "ts", "tsx"],
   moduleNameMapper: {
-    "^@/(.*)$": "<rootDir>/src/$1"
+    "^@/(.*)$": "<rootDir>/src/$1",
+    "\\.css$": "identity-obj-proxy"
   },
   transform: {
     "^.+\\.tsx?$": "ts-jest"
