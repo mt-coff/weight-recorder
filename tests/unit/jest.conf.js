@@ -14,7 +14,7 @@ module.exports = {
   mapCoverage: true,
   coverageDirectory: "<rootDir>/tests/unit/coverage",
   collectCoverageFrom: [
-    "src/**/*.{js, ts, tsx}",
+    "src/**/*.{js,ts,tsx}",
     "!src/index.tsx",
     "!**/node_modules/**"
   ],
