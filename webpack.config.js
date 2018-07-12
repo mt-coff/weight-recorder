@@ -60,6 +60,9 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
+    historyApiFallback: {
+      disableDotRule: true
+    },
     publicPath: "/",
     port: 8080
   }
