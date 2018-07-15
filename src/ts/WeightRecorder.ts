@@ -13,7 +13,7 @@ export default class WeightRecorder {
     }
   }
 
-  public addRecord(weight: number): void {
+  public addRecord(weight: string): object {
     const newRecord = {
       recordedDate: Moment().format("YYYY/MM/DD HH:mm"),
       weight: `${weight}`
@@ -21,6 +21,7 @@ export default class WeightRecorder {
 
     this.records.push(newRecord);
     localStorage.setItem("weight-recorder", JSON.stringify(this.records));
+    return newRecord;
   }
 
   public getRecord(): object[] {

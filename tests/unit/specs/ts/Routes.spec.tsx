@@ -1,4 +1,5 @@
-import { mount, ReactWrapper } from "enzyme";
+import { createMount } from "@material-ui/core/test-utils";
+import { ReactWrapper } from "enzyme";
 import * as React from "react";
 import { MemoryRouter } from "react-router";
 
@@ -10,10 +11,12 @@ import Routes from "@/Routes";
 
 describe("Routing test", () => {
   const createDOM = (path = "/"): ReactWrapper => {
+    const mount = createMount();
     return mount(
       <MemoryRouter initialEntries={[path]}>
         <Routes />
-      </MemoryRouter>
+      </MemoryRouter>,
+      {}
     );
   };
 
