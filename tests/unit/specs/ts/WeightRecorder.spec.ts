@@ -8,7 +8,7 @@ describe("WeightRecorder", () => {
 
   it("should set weight record", () => {
     Moment.locale("ja");
-    const weight = 80;
+    const weight = "80";
     const recorder = new WeightRecorder();
     const record = recorder.addRecord(weight);
 
