@@ -2,28 +2,6 @@ import WeightRecorder from "@/ts/WeightRecorder";
 import * as Moment from "moment";
 
 describe("WeightRecorder", () => {
-  let store: any = {};
-
-  const mockLocalStorage = {
-    getItem: (key: string): string => {
-      return key in store ? store[key] : null;
-    },
-
-    setItem: (key: string, value: string) => {
-      store[key] = value;
-    },
-
-    clear: () => {
-      store = {};
-    },
-
-    removeItem: (key: string) => {
-      delete store[key];
-    }
-  };
-
-  Object.defineProperty(window, "localStorage", { value: mockLocalStorage });
-
   beforeEach(() => {
     localStorage.clear();
   });
@@ -31,16 +9,10 @@ describe("WeightRecorder", () => {
   it("should set weight record", () => {
     Moment.locale("ja");
     const weight = 80;
-    const record = [
-      {
-        recordedDate: Moment().format("YYYY/MM/DD HH:mm"),
-        weight: `${weight}`
-      }
-    ];
     const recorder = new WeightRecorder();
+    const record = recorder.addRecord(weight);
 
-    recorder.addRecord(80);
-    expect(recorder.getRecord()).toEqual(record);
+    expect(recorder.getRecord().pop()).toEqual(record);
   });
 
   it("should get existed weight record", () => {
